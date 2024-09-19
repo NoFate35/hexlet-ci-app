@@ -1,8 +1,14 @@
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build: # имя взято для примера
     runs-on: ubuntu-latest
 
     steps:
-      - uses: make setup
-      - uses: make test
-      - uses: make lint
+      - uses: actions/checkout@v4
+      - run: make setup
+      - run: make test
+      - run: make lint
