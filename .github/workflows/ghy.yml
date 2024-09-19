@@ -13,3 +13,6 @@ jobs:
           cache: 'npm' # ускоряет повторные сборки
       - run: npm ci
       - run: npm test
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release
+
